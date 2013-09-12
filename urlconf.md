@@ -13,6 +13,7 @@ ROOT_URLCONF=xxxx         #该参数告诉Django用作本站的ULRConf, 默认�
     * 访问url的时候， Django根据ROOT_URLCONF装载URLConf
     * 逐个匹配urlpatterns, 命中即调用关联的视图函数，并HttpRequest对象作为第一个参数(也就是request参数)
     * 最后view函数负责返回一个HttpResponse对象, 呈现给浏览器
+    * ![dispatcher](http://images.cnitblog.com/blog/476998/201303/21173739-ca2d6fac22d44a52ae159be2ebf0a00c.png)
 
 
 *  不传参  
