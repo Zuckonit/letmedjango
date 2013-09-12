@@ -42,11 +42,9 @@ urlpatterns = patterns('',
         (r'^bar/$', views.foobar_view, {'template_name': 'template2.html'}),
     )
     ```
-    
     ```
     from django.shortcuts import render_to_response
     from mysite.models import MyModel
-
     def foobar_view(request, template_name):
         m_list = [1,2,3]
         return render_to_response(template_name, {'m_list': m_list})
@@ -55,19 +53,15 @@ urlpatterns = patterns('',
 
         ```
         #urls.py
-        
         from django.conf.urls.defaults import *
         from mysite import views
-        
         urlpatterns = patterns('',
             (r'^(foo)/$', views.foobar_view),
             (r'^(bar)/$', views.foobar_view),
         )
         ```
-
         ```      
         # views.py
-        
         from django.shortcuts import render_to_response
         from mysite.models import MyModel
         
@@ -83,7 +77,6 @@ urlpatterns = patterns('',
 *  include导入
 
         ```
-
         from django.conf.urls.defaults import *
         urlpatterns = patterns('',
                 (r'^weblog/', include('mysite.blog.urls')),
