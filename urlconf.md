@@ -7,6 +7,7 @@
 #settings.py
 ROOT_URLCONF=xxxx         #该参数告诉Django用作本站的ULRConf, 默认是urls.py
 ```
+
 *  不传参  
 ```
 from django.conf.urls.defaults import *
@@ -27,6 +28,7 @@ urlpatterns = patterns('',
         #do something here
         pass
     ```
+
     ```
     from django.conf.urls.defaults import *
     from views import hello
@@ -46,6 +48,7 @@ urlpatterns = patterns('',
         (r'^bar/$', views.foobar_view, {'template_name': 'template2.html'}),
     )
     ```
+    
     ```
     from django.shortcuts import render_to_response
     from mysite.models import MyModel
@@ -63,6 +66,7 @@ urlpatterns = patterns('',
     (r'^(bar)/$', views.foobar_view),
 )
 ```
+
 ```      
 # views.py
 from django.shortcuts import render_to_response
