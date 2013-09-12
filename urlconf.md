@@ -21,7 +21,6 @@ urlpatterns = patterns('',
 
 *  传参  
     * 动态传参
-    
     ```
     #views.py
     def hello(request, year, month):
@@ -35,8 +34,8 @@ urlpatterns = patterns('',
            (r'^arcticles/(?P<year>\d{4})/(?P<month>\d{2})/$', veiws.month_archive),  #命名组对应视图参数
     )
     ```
+
     * 固定参数
-    
     ```
     #urls.py
     from django.conf.urls.defaults import *
@@ -55,7 +54,6 @@ urlpatterns = patterns('',
         return render_to_response(template_name, {'m_list': m_list})
     ```
 *  视图冗余  
-
 ```
 #urls.py
 from django.conf.urls.defaults import *
@@ -80,12 +78,10 @@ def foobar_view(request, url):
 ```            
 
 *  include导入
-
 ```
 from django.conf.urls.defaults import *
 urlpatterns = patterns('',
 (r'^weblog/', include('mysite.blog.urls')),
 )
 此时， 访问的link变为^weblog/前缀 + 加上include的urls里面的设置
-
 ```
