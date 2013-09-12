@@ -22,6 +22,7 @@ urlpatterns = patterns('',
 
 *  传参  
     * 动态传参
+    
     ```
     #views.py
     def hello(request, year, month):
@@ -38,6 +39,7 @@ urlpatterns = patterns('',
     ```
 
     * 固定参数
+   
     ```
     #urls.py
     from django.conf.urls.defaults import *
@@ -66,7 +68,6 @@ urlpatterns = patterns('',
     (r'^(bar)/$', views.foobar_view),
 )
 ```
-
 ```      
 # views.py
 from django.shortcuts import render_to_response
