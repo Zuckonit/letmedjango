@@ -16,6 +16,7 @@
 
 * 模版的使用
     * string作为模版(这个固然不推荐， 只是用来解释模版的使用)
+    
     ```
     from django.http import HttpResponse
     from djang.template import Template, Context
@@ -30,6 +31,7 @@
     
     * 载入模版的方式  
         * 通过刚刚Django的模版设置， 我们可以把模版写到这个目录里面去。
+        
         ```
         #date.html
         <html>
