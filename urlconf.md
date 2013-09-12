@@ -61,7 +61,6 @@ urlpatterns = patterns('',
     
     ```
     from django.shortcuts import render_to_response
-    from mysite.models import MyModel
     def foobar_view(request, template_name):
         m_list = [1,2,3]
         return render_to_response(template_name, {'m_list': m_list})
