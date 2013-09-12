@@ -82,11 +82,11 @@ urlpatterns = patterns('',
 
 *  include导入
 
-```
+        ```
         from django.conf.urls.defaults import *
         urlpatterns = patterns('',
                 (r'^weblog/', include('mysite.blog.urls')),
         )
         此时， 访问的link变为^weblog/前缀 + 加上include的urls里面的设置
-```
+        ```
 
