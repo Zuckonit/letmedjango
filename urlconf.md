@@ -3,7 +3,6 @@
 [参考资料](http://www.cnblogs.com/BeginMan/archive/2013/03/21/2973820.html)  
 
 *  设置  
-
 ```
 #settings.py
 ROOT_URLCONF=xxxx         #该参数告诉Django用作本站的ULRConf, 默认是urls.py
