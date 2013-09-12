@@ -6,7 +6,7 @@
 * Django模版设置
 
     ```
-    通常可以用下面的这样一句代码来设置你的模版的根目录
+    通常可以用下面的这样一句代码来设置你的模版的根目录， 修改TEMPLATE_DIRS的值
     #settings.py
     
     TEMPLATE_DIRS = (  
