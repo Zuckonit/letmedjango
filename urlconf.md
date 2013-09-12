@@ -8,6 +8,13 @@
 ROOT_URLCONF=xxxx         #该参数告诉Django用作本站的ULRConf, 默认是urls.py
 ```
 
+* Django 处理请求的工作机制, 路由器
+    * 服务器启动， Django去同目录下的settings.py文件里寻找ROOT_URLCONF, 即寻找URLConf文件
+    * 访问url的时候， Django根据ROOT_URLCONF装载URLConf
+    * 逐个匹配urlpatterns, 命中即调用关联的视图函数，并HttpRequest对象作为第一个参数(也就是request参数)
+    * 最后view函数负责返回一个HttpResponse对象, 呈现给浏览器
+
+
 *  不传参  
 ```
 from django.conf.urls.defaults import *
