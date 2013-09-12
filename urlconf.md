@@ -19,7 +19,7 @@ urlpatterns = patterns('',
     
     ```
     #views.py
-    def hello(request, month, day):
+    def hello(request, year, month):
         #do something here
         pass
     ```
@@ -27,7 +27,7 @@ urlpatterns = patterns('',
     from django.conf.urls.defaults import *
     from views import hello
     urlpatterns = patterns('',
-           (r'^arcticles/(?P<year>\d{4})/(?P<month>\d{2})/$', veiws.month_archive),
+           (r'^arcticles/(?P<year>\d{4})/(?P<month>\d{2})/$', veiws.month_archive),  #命名组对应视图参数
     )
     ```
     * 固定参数
