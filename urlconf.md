@@ -16,6 +16,7 @@ urlpatterns = patterns('',
 
 *  传参  
     * 动态传参
+    
     ```
     #views.py
     def hello(request, month, day):
@@ -30,6 +31,7 @@ urlpatterns = patterns('',
     )
     ```
     * 固定参数
+    
     ```
     #urls.py
     from django.conf.urls.defaults import *
@@ -40,6 +42,7 @@ urlpatterns = patterns('',
         (r'^bar/$', views.foobar_view, {'template_name': 'template2.html'}),
     )
     ```
+    
     ```
     from django.shortcuts import render_to_response
     from mysite.models import MyModel
@@ -61,6 +64,7 @@ urlpatterns = patterns('',
     (r'^(bar)/$', views.foobar_view),
 )
 ```
+
 ```
 # views.py
 
@@ -75,7 +79,9 @@ def foobar_view(request, url):
     template_name = 'template2.html'
     return render_to_response(template_name, {'m_list': m_list})
 ```
+
 *  include导入
+
 ```
 from django.conf.urls.defaults import *
 urlpatterns = patterns('',
