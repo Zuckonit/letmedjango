@@ -68,13 +68,13 @@ urlpatterns = patterns('',
     (r'^(bar)/$', views.foobar_view),
 )
 ```
+
 ```      
 # views.py
 from django.shortcuts import render_to_response
-from mysite.models import MyModel
 
 def foobar_view(request, url):
-    m_list = MyModel.objects.filter(is_new=True)
+    m_list = [1,2,3]
     if url == 'foo':
     template_name = 'template1.html'
     elif url == 'bar':
@@ -83,6 +83,7 @@ def foobar_view(request, url):
 ```            
 
 *  include导入
+
 ```
 from django.conf.urls.defaults import *
 urlpatterns = patterns('',
