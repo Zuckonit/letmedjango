@@ -53,40 +53,40 @@ urlpatterns = patterns('',
     ```
 *  视图冗余  
 
-```
-#urls.py
+        ```
+        #urls.py
+        
+        from django.conf.urls.defaults import *
+        from mysite import views
+        
+        urlpatterns = patterns('',
+            (r'^(foo)/$', views.foobar_view),
+            (r'^(bar)/$', views.foobar_view),
+        )
+        ```
 
-from django.conf.urls.defaults import *
-from mysite import views
-
-urlpatterns = patterns('',
-    (r'^(foo)/$', views.foobar_view),
-    (r'^(bar)/$', views.foobar_view),
-)
-```
-
-```
-# views.py
-
-from django.shortcuts import render_to_response
-from mysite.models import MyModel
-
-def foobar_view(request, url):
-    m_list = MyModel.objects.filter(is_new=True)
-    if url == 'foo':
-    template_name = 'template1.html'
-    elif url == 'bar':
-    template_name = 'template2.html'
-    return render_to_response(template_name, {'m_list': m_list})
-```
+        ```
+        # views.py
+        
+        from django.shortcuts import render_to_response
+        from mysite.models import MyModel
+        
+        def foobar_view(request, url):
+            m_list = MyModel.objects.filter(is_new=True)
+            if url == 'foo':
+            template_name = 'template1.html'
+            elif url == 'bar':
+            template_name = 'template2.html'
+            return render_to_response(template_name, {'m_list': m_list})
+        ```
 
 *  include导入
 
 ```
-from django.conf.urls.defaults import *
-urlpatterns = patterns('',
-        (r'^weblog/', include('mysite.blog.urls')),
-)
-此时， 访问的link变为^weblog/前缀 + 加上include的urls里面的设置
+        from django.conf.urls.defaults import *
+        urlpatterns = patterns('',
+                (r'^weblog/', include('mysite.blog.urls')),
+        )
+        此时， 访问的link变为^weblog/前缀 + 加上include的urls里面的设置
 ```
 
